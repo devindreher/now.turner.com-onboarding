@@ -1,0 +1,296 @@
+<style>
+
+    p {
+        color: #000;
+    }
+    
+    ul li {
+        color: #000;
+    }
+    
+    ul li:before {
+        background-image: none !important;
+    }
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 5rem;
+        margin-top: 30px;
+        line-height: 95%;
+    }
+    
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+    
+    nhjsHR {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .subHead {
+        font-size: 3rem;
+        color: #000;
+        font-family: TurnerBold;
+        line-height: 95%;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    
+/*FLEX BOXES*/
+    
+    .tool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+
+    .tool-grid a {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 25%;
+      border: 1px solid dimgrey;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      padding: .5em;
+      margin: .5em;
+    }
+
+    .tool-grid a:hover {
+      box-shadow: 3px 3px 5px #888;
+      transition: .3s;
+      border: 3px solid #0052e7;
+    }
+
+    .tool-grid a h4 {
+        font-family: TurnerBold;
+        font-size: 1.3rem;
+    }
+    
+    .tool-grid a p {
+        font-size: .975rem;
+        line-height: 120%;
+    }
+    
+/*CHECKLIST*/
+    
+    .checklist-container {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-width: 75%;
+        margin: 0;
+    }
+    
+    .checklist-ul {
+        list-style-type: none;
+    }
+    
+    .checklist-ul li {
+        position: relative;
+        font-family: TurnerBold;
+        margin-bottom: 10px;
+    }
+    
+    .checklist-ul li p {
+        padding-left: 40px;
+        font-family: TurnerBold;
+    }
+    
+    .checklist-ul span {
+        position: absolute;
+    }
+    
+/*NAVIGATION*/
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 10px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 2000px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .tool-grid a {flex: 1 1 100%;}
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<div class="topnav" id="myTopnav">
+  <a href="http://now.turner.com/jumpstart">Jump Start</a>    
+  <a href="/jumpstart-about">About Turner</a>
+  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
+  <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
+  <a href="/jumpstart-career">Career Development</a>
+  <a href="/jumpstart-total-rewards">Total Rewards</a>
+  <a href="/jumpstart-tech">Technology</a>
+  <a href="/jumpstart-security">Security</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<h2>Your 90-day guide<span style="color: #0052e7;">.</span></h2>
+
+<br>
+
+<p>Your first 90 days with Turner will no doubt be a busy time.<br>
+Don't worry, we got you covered.</p>
+
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
+<h3 class="subHead">First day<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="checklist-container">
+    <ul class="checklist-ul">
+        <li><span>&#9744;</span><p>Get an employee ID badge and parking sticker.</p></li>
+        <li><span>&#9744;</span><p>Complete I-9 form.</p></li>
+        <li><span>&#9744;</span><p>Set up network access.</p></li>
+        <li><span>&#9744;</span><p>Connect with your manager.</p></li>
+    </ul>
+</div>
+
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
+<h3 class="subHead">Within 7 days<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="checklist-container">
+    <ul class="checklist-ul">
+        <li><span>&#9744;</span><p>Set up your work station.</p></li>
+        <li><span>&#9744;</span><p>Set initial expectations with your manager, learn about the team, etc.</p></li>
+        <li><span>&#9744;</span><p>Tour your work location.</p></li>
+    </ul>
+</div>
+
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
+<h3 class="subHead">Within 30 days<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="checklist-container">
+    <ul class="checklist-ul">
+        <li><span>&#9744;</span><p>Enroll in Turner's health &amp; wellness benefits (if applicable).</p></li>
+        <li><span>&#9744;</span><p>Complete required compliance training (you'll be getting a lot of reminders).</p></li>
+        <li><span>&#9744;</span><p>Set up 1:1 meetings with your manager/direct reports.</p></li>
+        <li><span>&#9744;</span><p>Build your network (e.g., join a <a href="https://timewarner.sharepoint.com/sites/turner_diversityandinclusion/Pages/home.aspx" target="_blank" style="font-family: TurnerBold;">BRG</a>)</p></li>
+    </ul>
+</div>
+
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
+<h3 class="subHead">31 days and beyond<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="checklist-container">
+    <ul class="checklist-ul">
+        <li><span>&#9744;</span><p>Work with your manager on what training or on-the-job experiences you should focus on.</p></li>
+    </ul>
+</div>
+
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
+<h3 class="subHead">Important resources<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="tool-grid">
+    <a href="http://now.turner.com" target="_blank">
+            <h4>Turner Now</h4>
+            <p>Turner's intranet</p>
+    </a>    
+    <a href="http://learn.turner.com" target="_blank">
+            <h4>Learn Now</h4>
+            <p>Our destination for learning &amp; performance</p>
+    </a>
+    <a href="http://myhr.turner.com" target="_blank">
+            <h4>myHR</h4>
+            <p>Human Resources<br>
+            (VPN Required)</p>
+    </a>
+    <a href="http://www.timewarnerbenefits.com" target="_blank">
+            <h4>Time Warner Benefits</h4>
+            <p>Enroll, make changes, and get information on health &amp; wellness benefits</p>
+    </a>
+    <a href="http://netbenefits.com" target="_blank">
+            <h4>Fidelity</h4>
+            <p>Manage your health and savings accounts</p>
+    </a>
+</div>

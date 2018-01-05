@@ -1,5 +1,13 @@
 <style>
     
+    p {
+        color: #000;
+    }
+    
+    ul li {
+        color: #000;
+    }
+    
     h2 {
         font-family: TurnerBold;
         font-size: 5rem;
@@ -12,15 +20,30 @@
         font-size: 1.5rem;
     }
     
-    .turnerLife {
-        background-color: #0052e7;
-        color: #fff;
-        width: 100%;
-        padding: 20px;
-        margin: 50px 0;
+    nhjsHR {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
     }
     
-    .turnerLife h2, .turnerLife p {
+    .turnerLife {
+        background-color: #0052e7;
+        max-width: 100%;
+        padding: 20px;
+        margin: 50px 0;
+        word-break: keep-all !important;
+        
+    }
+    
+    .turnerLife h2 {
+        font-size: 3rem;
+        font-family: TurnerBold;
+        color: #fff;
+    }
+    
+    .turnerLife p {
+        font-family: TurnerRegular;
         color: #fff;
     }
     
@@ -35,14 +58,130 @@
     
     .turnerMission {
         background-color: #000;
-        color: #fff;
-        width: 100%;
+        max-width: 100%;
         padding: 50px;
         margin: 50px 0;
+        word-break: keep-all !important;
+        hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        -webkit-hyphens: none;
     }
     
-    .turnerMission h2, .turnerMission p {
+    .turnerMission p {
+        font-size: 1.3rem;
+        font-family: TurnerRegular;
         color: #fff;
+    }
+    
+    .turnerMission h2 {
+        font-size: 3rem;
+        font-family: TurnerBold;
+        color: #fff;
+    }
+    
+/*RESPONSIVE 3 COLUMNS*/
+    
+    .nhjs-col3 {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+    }
+    
+    .nhjs-col3 h3 {
+        font-family: TurnerBold;
+        font-size: 1.5em;
+        color: #000;
+        line-height: 100%;
+        margin: 5px 0;
+    }
+    
+    .nhjs-col3 p {
+        color: #000;
+        font-size: 1.3rem;
+        line-height: 110%;
+    }
+    
+    .nhjs-row3:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .nhjs-col3 img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+/*RESPONSIVE 2 COLUMNS*/
+    
+    .nhjs-col2 {
+        float: left;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nhjs-row2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+/*JOHN HEADER*/
+    
+    .john {
+        width: 100%;
+        display: none;
+    }
+    
+/*TIMELINE*/
+    
+    .timeline-container {
+        max-width: 1024px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .timeline-item {
+        padding: 3em 2em 2em;
+        position: relative;
+        color: rgba(0,0,0,0.7);
+        border-left: 2px solid rgba(0,0,0,0.3);
+    }
+    
+    .timeline-item p {
+        font-size: 1rem;
+        color: #000;
+    }
+    
+    .timeline-item::before {
+        content: attr(date-is);
+        position: absolute;
+        left: 2em;
+        top: .5em;
+        display: block;
+        font-family: TurnerBold;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item::after {
+        width: 10px;
+        height: 10px;
+        display: block;
+        top: 1em;
+        position: absolute;
+        left: -7px;
+        border-radius: 10px;
+        content: '';
+        border: 2px solid rgba(0,0,0,0.3);
+        background: white;
+    }
+    
+    .timeline-item:last-child {
+        -o-border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
+        border-image: -webkit-linear-gradient(top rgba(0,0,0,0.3) 60%, transparent) 1 100%;
+        border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
     }
     
 /*NAVIGATION*/
@@ -88,6 +227,12 @@
             display: block;
             text-align: left;
         }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .nhjs-col3 {width: 100%;}
+        .nhjs-row2 {display: none;}
+        .john {display: inline-block;}
     }
 
     
@@ -143,6 +288,10 @@ function shrinkNav() {
 
 <div>&nbsp;</div>
 
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+
 <div class="turnerLife">
     <h2>
         #TurnerLife<br>
@@ -158,13 +307,111 @@ function shrinkNav() {
     </p>
 </div>
 
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
 <h3 class="subHead">Look at all that content!</h3>
 <p>Explore all our brands at <a href="http://www.turner.com/locations" target="_blank">turner.com/locations</a>.</p>
 
-[insert brand logos]
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/adultswim.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/bleacher-report.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/boomerang.png">
+    </div>
+</div>
 
-<div>&nbsp;</div>
-<div>&nbsp;</div>
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/cartoon-network.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/cnn.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/ELEAGUE.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/filmstruck.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/great-big-story.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/hln.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/istream-planet.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/march-madness.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/nba-digital.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/nba-league-pass.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/nba.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/ncaa-digital.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/pga-digital.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/sdux.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/tbs-mlb.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/tbs.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/tcm.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/tnt.png">
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/truTV.png">
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/turner-sports.png">
+    </div>
+</div>
+
+<br>
+<br>
+
+<hr class="nhjsHR">
+
 <div>&nbsp;</div>
 
 <img src="https://s3.amazonaws.com/tpd-images/onboarding/like-icon.png" style="margin-left: -2px; padding: 0;">
@@ -205,13 +452,82 @@ function shrinkNav() {
     </p>
 </div>
 
+<br>
+<br>
+
+<hr class="nhjsHR">
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
 <h3 class="subHead">All around the world<span style="color: #0052e7;">.</span></h3>
 
-[insert world map]
+<br>
+
+<img src="https://s3.amazonaws.com/tpd-images/onboarding/world-map.png" style="max-width: 100%; margin: 0 auto;">
+
+<br>
+<br>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <h3>West Coast</h3>
+        <p>
+            Los Angeles<br>
+            San Francisco
+        </p>
+    </div>
+    <div class="nhjs-col3">
+        <h3>Midwest</h3>
+        <p>
+            Detroit<br>
+            Chicago<br>
+            Denver<br>
+            Dallas
+        </p>
+    </div>
+    <div class="nhjs-col3">
+        <h3>East Coast</h3>
+        <p>
+            New York<Br>
+            Washington, D.C.<br>
+            Atlanta<br>
+            Miami
+        </p>
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <h3>Latin America</h3>
+        <p>
+            Mexico City<br>
+            Buenos Aires<br>
+            Sao Paulo<br>
+            Santiago
+        </p>
+    </div>
+    <div class="nhjs-col3">
+        <h3>Europe</h3>
+        <p>
+            London<br>
+            Munich
+        </p>
+    </div>
+    <div class="nhjs-col3">
+        <h3>Asia Pacific</h3>
+        <p>
+            Hong Kong<br>
+            Tokyo<br>
+            Mumbai
+        </p>
+    </div>
+</div>
+
+<br>
+
+<hr class="nhjsHR">
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
@@ -219,7 +535,70 @@ function shrinkNav() {
 
 <h3 class="subHead">Our (brief) history<span style="color: #0052e7;">.</span></h3>
 
-[insert timeline]
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div class="timeline-container">
+    <div class="timeline-item" date-is="1976">
+        <p>
+            The Superstation becomes the first national cable network.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1980">
+        <p>
+            CNN, the world's first 24-hour news network, launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1988">
+        <p>
+            TNT launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1992">
+        <p>
+            Cartoon Network launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1994">
+        <p>
+            TCM launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1995">
+        <p>
+            CNN.com launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="1996">
+        <p>
+            Turner is acquired by Time Warner.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="2006">
+        <p>
+            Turner acquires CourtTV and is re-branded as truTV shortly thereafter.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="2012">
+        <p>
+            Bleacher Report launches.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="2015">
+        <p>
+            Great Big Story and Super Deluxe launch.
+        </p>
+    </div>
+    <div class="timeline-item" date-is="2016">
+        <p>
+            iStreamPlanet, FilmStruck, and ELEAGUE launch, adding more to our digital landscape.
+        </p>
+    </div>
+</div>
+
+<br>
+
+<hr class="nhjsHR">
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
@@ -227,49 +606,166 @@ function shrinkNav() {
 
 <h3 class="subHead">Who's in charge here?</h3>
 
-[insert headshots]
+<br>
+<br>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/martin-john.png">
+        <h3>John Martin</h3>
+        <p>Chairman &amp; CEO, Turner</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/battin-molly.png">
+        <h3>Molly Battin</h3>
+        <p>EVP and Global Chief Communications and Corporate Marketing Officer, Turner</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/desroches-pascal.png">
+        <h3>Pascal Desroches</h3>        
+        <p>EVP and Chief Financial Officer, Turner</p>
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/levy-david.png">
+        <h3>David Levy</h3>
+        <p>President, Turner</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/sams-louise.png">
+        <h3>Louise Sams</h3>
+        <p>EVP and General Counsel, Turner</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/santone-angela.png">
+        <h3>Angela Santone</h3>
+        <p>EVP and Global Chief Human Resources Officer, Turner</p>
+    </div>
+</div>
+
+<div class="nhjs-row3">
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/shapiro-doug.png">
+        <h3>Doug Shapiro</h3>
+        <p>EVP and Chief Strategy Officer, Turner</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/zeiler-gerhard.png">
+        <h3>Gerhard Zeiler</h3>
+        <p>President, Turner International</p>
+    </div>
+    <div class="nhjs-col3">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/zucker-jeff.png">
+        <h3>Jeff Zucker</h3>
+        <p>President, CNN Worldwide</p>
+    </div>
+</div>
+
+<br>
+
+<hr class="nhjsHR">
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
-<h3 class="subHead">A Message From John Martin<span style="color: #0052e7;">.</span></h3>
 
-[insert John + priorities]
+<div class="nhjs-row2" style="border-bottom: 10px solid #000;">
+    <div class="nhjs-col2">
+        <h3 class="subHead">A Message From John Martin<span style="color: #0052e7;">.</span></h3>
+        <p>Chairman and CEO of Turner</p>
+    </div>
+    <div class="nhjs-col2" style="text-align: right; border-right: 10px solid #000;">
+        <img src="https://s3.amazonaws.com/tpd-images/onboarding/martin-john.png">
+    </div>
+</div>
+
+<div class="john">
+    <h3 class="subHead">A Message From John Martin<span style="color: #0052e7;">.</span></h3>
+    <p>Chairman and CEO of Turner</p>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<p>Our Priorities:</p>
+
+<ul>
+    <li><b>Put the fan at the center.</b></li>
+    <li><b>Dominate our core.</b></li>
+    <li><b>Create new revenue streams.</b></li>
+    <li><b>Expand internationally.</b></li>
+    <li><b>Transform our culture.</b></li>
+</ul>
+
+<br>
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
 <div class="turnerMission">
-    <span style="font-size: 1.2rem;">
+    <p>
         Our Mission:
-    </span>
-    <br>
-    <br>
-    <span style="font-size: 3rem; font-family: TurnerBold;">
+    </p>
+    <h2>
         Reimagine TV.
-    </span>
+    </h2>
     <br>
-    <br>
-    <br>
-    <span style="font-size: 1.2rem;">
+    <p>
         Our Vision:
-    </span>
-    <br>
-    <br>
-    <span style="font-size: 3rem; font-family: TurnerBold;">
+    </p>
+    <h2>
         Become a fan engagement company.
-    </span>
+    </h2>
     <br>
-    <br>
-    <br>
-    <span style="font-size: 1.2rem;">
+    <p>
         How:
-    </span>
-    <br>
-    <br>
-    <span style="font-size: 3rem; font-family: TurnerBold;">
+    </p>
+    <h2>
         We bring the best of art + science.
-    </span>
+    </h2>
 </div>
+
+<br>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h3 class="subHead">How we pay the bills<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<p>
+    Although each of our networks has unique content and programming, they all make money the same way &mdash; from a <b>dual revenue stream</b> powered by <b>advertising sales</b> and revenue generated by <b>content license fees</b>.
+</p>
+
+<center>
+    <img src="https://s3.amazonaws.com/tpd-images/onboarding/how-we-make-money.png" style="max-width: 100%;">
+</center>
+
+<p style="font-family: TurnerBold;">Content Sales</p>
+<p>
+    We sell our content to cable operators, satellite providers and telcos (e.g., AT&amp;T). In turn, they package our product(s) and sell it as a subscription offering to their customers. Turner also licenses branded content from our networks and brands on emerging platforms such as smart phones and tablets, electronic storefronts (e.g., iTunes), and other video-on-demand outlets.
+</p>
+
+<p style="font-family: TurnerBold;">Advertising Sales</p>
+<p>
+    In addition to generating license fees, the distribution of content creates the audience foundation of Turner's ad sales business. Advertisers and ad agencies want their commercials seen by a particular viewing audience. The purchase price of this advertising is based on three factors:
+</p>
+
+<p style="margin-left: 20px;">
+    <b>Capacity:</b><br>
+    The number of hours available to sell to advertisers.
+    <br><br>
+    <b>Demographics:</b><br>
+    Advertisers use this info to determine the type of audiences viewing a particular program.
+    <br><br>
+    <b>Ratings</b><br>
+    We use this info to sell advertising, set prices for commercials, attract media attention, and making programming decisions.
+</p>

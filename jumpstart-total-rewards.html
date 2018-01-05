@@ -1,0 +1,222 @@
+<style>
+
+    p {
+        color: #000;
+    }
+    
+    ul li {
+        color: #000;
+        font-weight: bold;
+    }
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 5rem;
+        margin-top: 30px;
+        line-height: 95%;
+    }
+    
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+    
+    nhjsHR {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .subHead {
+        font-size: 3rem;
+        color: #000;
+        font-family: TurnerBold;
+        line-height: 95%;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    
+    .blackbox {
+        background-color: #000;
+        max-width: 100%;
+        padding: 50px;
+        margin: 50px 0;
+        word-break: keep-all !important;
+        hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        -webkit-hyphens: none;
+    }
+    
+    .blackbox p {
+        font-size: 1.3rem;
+        font-family: TurnerRegular;
+        color: #fff;
+    }
+    
+    .blackbox h2 {
+        font-size: 3rem;
+        font-family: TurnerBold;
+        color: #fff;
+        line-height: 125%;
+    }
+    
+    .blackbox a {
+        color: #fff;
+    }
+    
+/*NAVIGATION*/
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 10px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 2000px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+</style>
+
+<!--TOP NAVIGATION-->
+
+<div class="topnav" id="myTopnav">
+  <a href="http://now.turner.com/jumpstart">Jump Start</a>    
+  <a href="/jumpstart-about">About Turner</a>
+  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
+  <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
+  <a href="/jumpstart-career">Career Development</a>
+  <a href="/jumpstart-total-rewards">Total Rewards</a>
+  <a href="/jumpstart-tech">Technology</a>
+  <a href="/jumpstart-security">Security</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<div>
+    <h2>
+        <span style="vertical-align: middle;">
+                So much more than a paycheck<span style="color: #0052e7;">.</span>
+        </span>
+        <span style="font-size: 1rem; vertical-align: middle;">
+            (Cha-ching!)
+        </span>
+    </h2>
+</div>
+
+<br>
+
+<p>Turner prioritizes a balanced life where finances, health, and career are in sync.</p>
+
+<h4>Here's what Turner offers:</h4>
+
+<div style="margin-left: 20px;">
+    <ul>
+        <li>Medical, dental, and vision coverage</li>
+        <li>Spending accounts (health care, limited purpose, dependent day care, and health savings)</li>
+        <li>Long-term disability premiums (treated as imputed income)</li>
+        <li>Commuter benefits (free parking in select locations, public transport subsidies, ridesharing options, etc.)</li>
+        <li>Optional group life insurance</li>
+        <li>401(k) retirement benefits</li>
+    </ul>
+</div>
+
+<div>&nbsp;</div>
+
+<center>
+    <img src="https://s3.amazonaws.com/tpd-images/onboarding/total-rewards-icons.png" style="max-width: 100%;">
+</center>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h3 class="subHead">Health Benefits<span style="color: #0052e7;">.</span></h3>
+
+<br>
+
+<div class="blackbox">
+    <p>If you remember nothing else from this page, remember this:</p>
+    <h2>You have <span style="color: rgb(255,56,0)">30 days</span> from your benefits eligibility date to make your benefits elections.</h2>
+    <p>Visit <a href="http://www.timewarnerbenefits.com" target="_blank">timewarnerbenefits.com</a> to review your benefit options and to make your elections.</p>
+</div>
+
+<br>
+
+<h4>Benefits eligibility:</h4>
+
+<div style="margin-left: 20px;">
+    <ul>
+        <li>Regular, full-time and part-time employees who are regularly scheduled to work at least 20 hours a week.</li>
+        <li>Benefits coverage begins the first day of the month following your date of hire.</li>
+        <li>If you're a rehire with a break in service of less than 30 days, your benefits coverage begins on your rehire date.</li>
+        <li>If you're converting from temporary to regular status, your benefits coverage may begin sooner than the first day of the month following your date of hire.</li>
+    </ul>
+    <br>
+    <p>Contact <a href="myhr.turner.com" target="_blank">myHR</a> (VPN required) to verify your benefits eligibility date.</p>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h4>Medical, dental, and vision plans:</h4>
+
+<p>Plans available for benefits-eligible employees and eligible dependants which may include:</p>
+
+<div style="margin-left: 20px;">
+    <ul>
+        <li>Your spouse or domestic partner</li>
+        <li>Your children and the children of your spouse or domestic partner, up to age 26</li>
+    </ul>
+</div>
+
+<p>Refer to the summary plan descriptions at <a href="http://www.timewarnerbenefits.com" target="_blank">timewarnerbenefits.com</a> for further information regarding eligibility.</p>
