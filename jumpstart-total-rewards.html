@@ -6,7 +6,6 @@
     
     ul li {
         color: #000;
-        font-weight: bold;
     }
     
     h2 {
@@ -69,6 +68,43 @@
     
     .blackbox a {
         color: #fff;
+    }
+    
+/*FLEX BOXES*/
+    
+    .tool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+
+    .tool-grid a {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 25%;
+      border: 1px solid dimgrey;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      padding: .5em;
+      margin: .5em;
+    }
+
+    .tool-grid a:hover {
+      box-shadow: 3px 3px 5px #888;
+      transition: .3s;
+      border: 1px solid #0052e7;
+    }
+
+    .tool-grid a h4 {
+        font-family: TurnerBold;
+        font-size: 1.3rem;
+    }
+    
+    .tool-grid a p {
+        font-size: .975rem;
+        line-height: 120%;
     }
     
 /*NAVIGATION*/
@@ -162,12 +198,14 @@ function shrinkNav() {
 
 <div style="margin-left: 20px;">
     <ul>
+        <b>
         <li>Medical, dental, and vision coverage</li>
         <li>Spending accounts (health care, limited purpose, dependent day care, and health savings)</li>
         <li>Long-term disability premiums (treated as imputed income)</li>
         <li>Commuter benefits (free parking in select locations, public transport subsidies, ridesharing options, etc.)</li>
         <li>Optional group life insurance</li>
         <li>401(k) retirement benefits</li>
+        </b>
     </ul>
 </div>
 
@@ -196,14 +234,21 @@ function shrinkNav() {
 
 <div style="margin-left: 20px;">
     <ul>
+        <b>
         <li>Regular, full-time and part-time employees who are regularly scheduled to work at least 20 hours a week.</li>
         <li>Benefits coverage begins the first day of the month following your date of hire.</li>
         <li>If you're a rehire with a break in service of less than 30 days, your benefits coverage begins on your rehire date.</li>
         <li>If you're converting from temporary to regular status, your benefits coverage may begin sooner than the first day of the month following your date of hire.</li>
+        </b>
     </ul>
     <br>
     <p>Contact <a href="myhr.turner.com" target="_blank">myHR</a> (VPN required) to verify your benefits eligibility date.</p>
 </div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
@@ -214,9 +259,199 @@ function shrinkNav() {
 
 <div style="margin-left: 20px;">
     <ul>
+        <b>
         <li>Your spouse or domestic partner</li>
         <li>Your children and the children of your spouse or domestic partner, up to age 26</li>
+        </b>
     </ul>
 </div>
 
 <p>Refer to the summary plan descriptions at <a href="http://www.timewarnerbenefits.com" target="_blank">timewarnerbenefits.com</a> for further information regarding eligibility.</p>
+
+<div style="margin-left: 20px;">
+    <h4>Medical</h4>
+    <ul>
+        <li><b>Anthem Blue Cross Blue Shield:</b> PPO, PPO Plus, and PPO Basic (includes prescription drug coverage through CVS/Caremark and behavior health coverage through Anthem.</li>
+        <li><b>Kaiser Permanente:</b> HMO and Health Savings HMO (includes prescription drug and mental health/substance abuse coverage through Kaiser Permanente).</li>
+    </ul>
+    
+    <br>
+    
+    <h4>Dental</h4>
+    <ul>
+        <li>PPO and Prevantative PPO programs administered by MetLife.</li>
+    </ul>
+    
+    <Br>
+        
+    <h4>Vision</h4>
+    <ul>
+        <li>Administered by EyeMed.</li>  
+    </ul>  
+</div>
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<hr class="nhjsHR">
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<h4>Employee Medical Contributions</h4>
+    
+<ul>
+    <li>
+        <b>You share the costs with bi-weekly pre-tax payroll contributions, which are based on salary band tier and coverage level:</b><br><br>
+        <ul>
+            <li>Employee only</li>
+            <li>Employee + partner</li>
+            <li>Employee + child(ren)</li>
+            <li>Employee + partner + child(ren)</li>
+        </ul>
+    </li>
+    <li>
+        <b>Medical, dental, and vision are separate pre-tax bi-weekly payroll contributions.</b>
+    </li>
+    <li>
+        <b>The cost of your medical, dental, and vision will be deducted from your paycheck retroactive to your benefits eligibility date.</b>
+    </li>
+</ul>
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<hr class="nhjsHR">
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<h4>401(k) Retirement Benefits</h4>
+    
+<ul>
+    <li>
+        <b>New, eligible employees are automatically enrolled at a contribution rate of 3% after two months of service, unless you opt out of automatic enrollment.</b>
+    </li>
+    <li>
+        <b>Contributions will be increased by 1% each year up to 6%.</b>
+    </li>
+    <li>
+        <b>The default investment option is the Growth Asset Allocation Fund.</b>
+    </li>
+</ul>
+    
+<br>
+    
+<div style="margin-left: 20px;">
+    <h4>Employee Contributions</h4>
+    <ul>
+        <li>
+            <b>Pre-tax payroll contributions:</b> 2%-50%
+        </li>
+        <li>
+            <b>2018 IRS limits: $18,500; age 50 and over an additional $6,500</b>
+        </li>
+    </ul>
+    
+    <br>
+    
+    <h4>Employer Contributions/Company Match</h4>
+    <ul>
+        <li>
+            The company match begins two months from your hire date.
+        </li>
+        <li>
+            Time Warner matches 7% on the first 6% contributed (133 1/3% on each dollar you contribute up to the first 3% and 100% on each dollar you contribute on the next 3% of eligible pay).
+        </li>
+        <li>
+            The company match is automatically allocated according to your investment elections.
+        </li>
+    </ul>
+    
+    <Br>
+        
+    <h4>Vesting</h4>
+        
+    <ul>
+        <li>
+            Vesting at 100% occurs after two years of service.
+        </li>    
+        <li>
+            Any company contributions prior to July 1, 2010 will follow prior year vesting schedules.
+        </li>
+    </ul>
+        
+    <br>
+        
+    <h4>For More Information on Retiremenent Benefits</h4>
+        
+    <p>Learn more at <a href="http://www.netbenefits.com" target="_blank">netbenefits.com</a> or call Fidelity at 1-800-354-3435.</p>   
+</div>
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<hr class="nhjsHR">
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<div>
+    <h3 class="subHead">
+        <span style="vertical-align: middle;">
+                Wait.<br> There's more<span style="color: #0052e7;">.</span>
+        </span>
+        <span style="font-size: 1rem; vertical-align: middle;">
+            (Perks and discounts)
+        </span>
+    </h3>
+</div>
+    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+    
+<div class="tool-grid">
+    <a href="/turner-athletic-club" target="_blank">
+        <h4>Turner Athletic Club</h4>
+    </a>
+    <a href="/turner-health-and-wellness-center" target="_blank">
+        <h4>Health &amp; Wellness Center</h4>
+    </a>
+    <a href="timewarnerfitnation.twi.com" target="_blank">
+        <h4>Time Warner Fitnation</h4>
+        <p>VPN Required</p>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=dca8f4e3137cba006b3d30128144b006" target="_blank">
+        <h4>Parental Leave</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=19fc0bc013cd7a40ee513ff18144b04f" target="_blank">
+        <h4>Backup Childcare</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=6698b4e3137cba006b3d30128144b007" target="_blank">
+        <h4>Elder Care</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=d29874e3137cba006b3d30128144b06b" target="_blank">
+        <h4>Adoption Assistance</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=067ec38413cd7a40ee513ff18144b0cb" target="_blank">
+        <h4>Egg Freezing Assistance Program</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=a9a874e3137cba006b3d30128144b0f5" target="_blank">
+        <h4>Surrogacy Assistance Program</h4>
+    </a>
+    <a href="www.turnerbrandshop.com" target="_blank">
+        <h4>Turner Brand Shop</h4>
+    </a>
+    <a href="/perksdiscounts" target="_blank">
+        <h4>Attractions &amp; Events</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=8bb291a213f8be00ee513ff18144b01c" target="_blank">
+        <h4>Care.com</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f25971bf13b83e006b3d30128144b0fe" target="_blank">
+        <h4>Good Measure Meals</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f25971bf13b83e006b3d30128144b0fe" target="_blank">
+        <h4>Weight Watchers&reg;</h4>
+    </a>
+</div>
