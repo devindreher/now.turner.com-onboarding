@@ -45,7 +45,6 @@
     .nhjs-col3 {
         float: left;
         width: 33.33%;
-        padding: 10px;
     }
     
     .nhjs-row3:after {
@@ -56,7 +55,36 @@
     
     .nhjs-col3 img {
         max-width: 100%;
-        margin: 0 auto;
+    }
+    
+/*FLEXBOXES*/
+    
+    .tool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tool-grid > div {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 25%;
+      border: 1px solid dimgrey;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      padding: .5em;
+      margin: .5em;
+    }
+
+    .tool-grid > div h4 {
+        font-family: TurnerBold;
+        font-size: 1.3rem;
+    }
+    
+    .tool-grid > div p {
+        font-size: 1rem;
+        line-height: 140%;
     }
     
 /*NAVIGATION*/
@@ -163,44 +191,51 @@ function shrinkNav() {
 
 <br>
 
-<div class="nhjs-row3">
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+ASIA.png">
+<div class="tool-grid">
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Asia.png">
+        <hr>
+        <p>Turner Asia raises the distinctive voice of Asian-Pacific American employees by celebrating, building, and leveraging the talents of our members, enabling us to support Turner’s “fan first” strategy and commitment to be a great place to work.</p>
     </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+BLACK+PROFESSIONALS.png">
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-BlackProfessionals.png">
+        <hr>
+        <p>Turner Black Professionals leverages and builds the talents of black professionals, while contributing to the people, programming, and perspective of the company with the ultimate goal of building a pipeline of talent to fuel Turner’s growth.</p>
     </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+DISABILITY_RG.png">
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Disability-Resource-Group.png">
+        <hr>
+        <p>Turner Disability Resource Group promotes, empowers, and fosters inclusion of people with disabilities and supports the positive portrayal of individuals with disabilities.</p>
     </div>
-</div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-NextGen.png">
+        <hr>
+        <p>NextGen is comprised of emerging leaders at Turner who are passionate about the future and success of our company. Our mission is to seek opportunities to inspire fresh perspectives that will grow Turner’s brand and global outreach.</p>
+    </div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Parents.png">
+        <hr>
+        <p>Turner Parents’ mission is to leverage employees who are parents as an organizational asset in effecting marketplace impact and promoting work/life balance by connecting them with information, resources, and tools.</p>
+    </div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-TurnOut.png">
+        <hr>
+        <p>TurnOut is dedicated to fostering the interests of gay, lesbian, bisexual, transgender, and ally employees by creating awareness, developing a positive collective identity, and building a supporting community.</p>
+    </div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Uno.png">
+        <hr>
+        <p>Turner Uno acts as a bridge between Turner and the thriving U.S. Hispanic/Latino community and consumers.</p>
+    </div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Vets.png">
+        <hr>
+        <p>Turner Vets strengthens Turner’s marketplace, workplace, and workforce by leveraging veterans and unifying the Turner community.</p>
+    </div>
+    <div>
+        <img src="https://www.turner.com/s3fs-public/BRG-Women.png">
+        <hr>
+        <p>Turner Women is a diverse and collaborative community of women dedicated to encouraging, empowering, and equipping female employees to achieve their full career potential and grow Turner’s competitive edge.</p>
+    </div>
 
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-
-<div class="nhjs-row3">
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+NEXT+GEN.png">
-    </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+PARENTS.png">
-    </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+TURN+OUT.png">
-    </div>
-</div>
-
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-
-<div class="nhjs-row3">
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+UNO.png">
-    </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER+VETS.png">
-    </div>
-    <div class="nhjs-col3">
-        <img src="https://s3.amazonaws.com/tpd-images/onboarding/TURNER-WOMEN.png">
-    </div>
 </div>
