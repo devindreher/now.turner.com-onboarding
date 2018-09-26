@@ -7,6 +7,62 @@
         line-height: 95%;
     }
     
+    .cards {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+    
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+    }
+    
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    }
+    
+    .card article {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 120%;
+    }
+    
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    @media only screen and (min-width: 850px) {
+        .cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
 /*NAVIGATION*/
 
     .topnav {
@@ -90,3 +146,64 @@ Welcome to Turner<span style="color: #0052e7;">.</span></h2>
 <p>You are now part of a creative and innovative company that is reimagining television and pushing the boundaries of what's possible &mdash; <b>to excite the fan in everyone.</b></p>
 
 <p>This space includes tools and resources to get you started at Turner. Should you need help along the way, give us a shout at <a href="mailto:onboarding@turner.com">onboarding@turner.com</a>.</p>
+
+<div>&nbsp;</div>
+
+<div class="cards">
+    <div>
+        <a href="/jumpstart-about" class="card">
+            <article>
+                <h1>About Turner</h1>
+                <p>At Turner, we make more than just great content: we make fans. You're now a driving force behind the world's leading fan engagement company. Find out more.</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-90-day-guide" class="card">
+            <article>
+                <h1>90-Day Guide</h1>
+                <p>Your first 90 days with Turner will no doubt be a busy time. Don't worry, we got you covered.</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-diversity" class="card">
+            <article>
+                <h1>Diversity &amp; Inclusion</h1>
+                <p>We don't fear change &mdash; we encourage it. Find out more about our long-running committment to diversity and inclusion.</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-career" class="card">
+            <article>
+                <h1>Career Development</h1>
+                <p>At Turner, we believe not only in growing your career, but building lifelong learners. Here's how...</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-total-rewards" class="card">
+            <article>
+                <h1>Total Rewards</h1>
+                <p>Turner prioritizes a balanced life where finances, health, and career are in sync. Here's what we offer...</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-tech" class="card">
+            <article>
+                <h1>Technology</h1>
+                <p>Here's what you need to do on day one to get your tech up and running.</p>
+            </article>
+        </a>
+    </div>
+    <div>
+        <a href="/jumpstart-security" class="card">
+            <article>
+                <h1>Security</h1>
+                <p>Important information and contacts.</p>
+            </article>
+        </a>
+    </div>
+</div>
