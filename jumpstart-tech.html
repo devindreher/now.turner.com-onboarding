@@ -1,125 +1,245 @@
-<style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
 
-    p {
-        color: #000;
-    }
-    
-    ul li {
-        color: #000;
-    }
-    
-    h2 {
-        font-family: TurnerBold;
-        font-size: 5rem;
-        margin-top: 30px;
-        line-height: 95%;
-    }
-    
-    h3 {
-        font-family: TurnerBold;
-        font-size: 1.5rem;
-    }
-    
-    h4 {
-        font-family: TurnerBold;
-        font-size: 1.5rem;
-        margin-bottom: 0;
-    }
-    
-    nhjsHR {
-        border: 0;
-        height: 0;
-        border-top: 1px solid rgba(0,0,0,0.1);
-        border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-    
-    .subHead {
-        font-size: 3rem;
-        color: #000;
-        font-family: TurnerBold;
-        line-height: 95%;
-        margin: 0 0 5px 0;
-        padding: 0;
-    }
-    
-/*NAVIGATION*/
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-    }
+                    // Store hash
+                    var hash = this.hash;
 
-    .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 10px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
-    }
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
 
-    .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
-    }
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
 
-    .topnav .icon {
-      display: none;
-    }
+    </script>
 
-/*MEDIA QUERIES*/
+    <style>
+        p {
+            color: #000;
+        }
 
-    @media screen and (max-width: 2000px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
-        .topnav.responsive .icon {
+        ul li {
+            color: #000;
+        }
+
+        h2 {
+            font-family: TurnerBold;
+            font-size: 5rem;
+            margin-top: 30px;
+            line-height: 95%;
+        }
+
+        h3 {
+            font-family: TurnerBold;
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-family: TurnerBold;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        nhjsHR {
+            border: 0;
+            height: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .subHead {
+            font-size: 3rem;
+            color: #000;
+            font-family: TurnerBold;
+            line-height: 95%;
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+
+        /*LIST*/
+
+        ol.steps {
+            list-style-type: none;
+            list-style-type: decimal !ie;
+            margin: 0;
+            margin-left: 3em;
+            padding: 0;
+            counter-reset: li-counter;
+        }
+
+        ol.steps>li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 0.5em;
+            min-height: 3em;
+            border-left: 2px solid #ccc;
+            color: #000;
+        }
+
+        ol.steps>li:before {
             position: absolute;
-            right: 0;
             top: 0;
+            left: -1em;
+            width: 0.8em;
+            font-size: 3em;
+            line-height: 1;
+            font-family: TurnerBold;
+            text-align: right;
+            color: #464646;
+            content: counter(li-counter);
+            counter-increment: li-counter;
         }
-        .topnav.responsive a {
-            float: none;
+
+        /*FLEXBOXES*/
+
+        .card-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 0 1 100%;
+            margin: 0 10px 10px 0;
+            border: 1px solid grey;
+            border-top: 10px solid black;
+            box-shadow: 1px 1px 3px #888;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h2 {
+            font-family: TurnerBold;
+            font-size: 24px;
+            line-height: 120% !important;
+            margin-top: 0;
+        }
+
+        .card-content p {
+            font-size: 14px !important;
+            line-height: 140%;
+        }
+
+        .card-content a {
+            font-size: 14px !important;
+            line-height: 140% !important;
+        }
+
+
+
+        /*NAVIGATION*/
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
             display: block;
-            text-align: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 10px;
+            text-decoration: none;
+            font-size: 15px !important;
+            font-family: TurnerBold;
         }
-    }
-    
-</style>
+
+        .topnav a:hover {
+            background-color: #0052e7;
+            color: #fff;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /*MEDIA QUERIES*/
+
+        @media screen and (max-width: 2000px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        @media all and (min-width: 30em) {
+            .card {
+                flex: 0 1 30%
+            }
+            ;
+            .card-content p {
+                font-size: .9em;
+            }
+        }
+
+    </style>
+
+</head>
 
 <!--TOP NAVIGATION-->
 
 <div class="topnav" id="myTopnav">
-  <a href="http://now.turner.com/jumpstart">Jump Start</a>    
-  <a href="/jumpstart-about">About Turner</a>
-  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
-  <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
-  <a href="/jumpstart-career">Career Development</a>
-  <a href="/jumpstart-total-rewards">Total Rewards</a>
-  <a href="/jumpstart-tech">Technology</a>
-  <a href="/jumpstart-security">Security</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://now.turner.com/jumpstart">Jump Start</a>
+    <a href="/jumpstart-about">About Turner</a>
+    <a href="/jumpstart-90-day-guide">90-Day Guide</a>
+    <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
+    <a href="/jumpstart-career">Career Development</a>
+    <a href="/jumpstart-total-rewards">Total Rewards</a>
+    <a href="/jumpstart-tech">Technology</a>
+    <a href="/jumpstart-security">Security</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <div>
     <h2>
         <span style="vertical-align: middle;">
-            Plug in<span style="color: #0052e7;">.</span><br>
-            Tune in<span style="color: #0052e7;">.</span><br>
-            Now get to work!
+            Plug in<span style="color: #0052e7;">.</span><br> Tune in<span style="color: #0052e7;">.</span><br> Now get to work!
         </span>
         <span style="font-size: 1rem; vertical-align: middle;">
             (In a non-bossy way)
@@ -135,22 +255,30 @@ function shrinkNav() {
 <br>
 <br>
 
-<div style="margin-left: 20px;">
-    <h4><a href="#NT" style="font-family: TurnerBold;">Get your NT login.</a></h4>
-    <p>(Username and password)</p>
-    <br>
-    <h4>Create a password at:<br>
-    <a href="changepass.turner.com" target="_blank" style="font-family: TurnerBold;">changepass.turner.com</a></h4>
-    <p>All employees are required to change their password every 90 days at<br>
-    <a href="mypassword.turner.com" target="_blank">mypassword.turner.com</a>.    
-    </p>
-    <br>
-    <h4><a href="#RSA" style="font-family: TurnerBold;">Request a hard or soft RSA token.</a></h4>
-    <br>
-    <h4>Get on wifi at:<br>
-    <a href="mywirelessdevices.turner.com" target="_blank" style="font-family: TurnerBold;">mywirelessdevices.turner.com</a></h4>
-    <p>(VPN required)</p>
+<div class="card-wrapper">
+    <div class="card">
+        <div class="card-content">
+            <h2>Get your computer login and email</h2>
+            <p>Your computer login should be your first initial followed by your last name. <a href="#login">Follow these instructions</a> to set your password.</p>
+            <p>Your email address should follow a firstname.lastname@turner.com format. If you need assistance logging into your computer or accessing your email, <a href="#contact">contact the EIS/IT service desk.</a></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Request an RSA token</h2>
+            <p>Your RSA token grants you access to certain applications and areas of the Turner network as well as the ability to work remotely. <a href="#token">Here's how to get one.</a></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Set up wifi</h2>
+            <p>While on a Turner campus, connect to "tbsemployee."</p>
+            <p>Visit <a href="http://tim.turner.com/technology/platforms/wireless/sitepages/home.aspx" target="_blank">My Wireless Devices</a> for more info.</p>
+        </div>
+    </div>
 </div>
+
+
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
@@ -160,127 +288,121 @@ function shrinkNav() {
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
-<h4>How to contact the EIS/IT Service Desk:</h4>
+<a name="login"></a>
+<h4>Setting Up Your Password</h4>
 
 <br>
+
+<p>Your hiring manager will provide you with a temporary password to get your started, but you'll need to create one of your own. Here's how:</p>
+
+<ol class="steps">
+    <li>Visit <a href="https://change.timewarner.com" target="_blank">change.timewarner.com</a>.</li>
+    <li>Enter your temporary password. Note that this password is case sensitive.<br>Click "Log On" when finished.</li>
+    <li>
+        Create a new password of your choice using the following criteria:<br><br>
+        <ul>
+            <li>Between 12 and 16 characters</li>
+            <li>Cannot contain your account name or parts of your full name that exceed 2 consecutive characters</li>
+            <li>Must contain characters from 3 of the following categories:<br> English uppercase letters (A-Z)<br> English lowercase letters (a-z)<br> Base 10 digits (0&ndash;9)<br> Non-alphanumeric characters (e.g., ! # $)
+            </li>
+        </ul>
+    </li>
+    <li>Re-enter your new password in the "Confirm Password" field.</li>
+    <li>Click "Submit" when finished.</li>
+</ol>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<hr class="nhjsHR">
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+
+<a name="token"></a>
+<h4>Requesting an RSA Token</h4>
+
 <br>
 
-<div style="margin-left: 20px;">
-    <h4>Atlanta</h4>
-    <p>x7-5000 (404-827-5000)</p>
-    <br>
-    <h4>Chicago &amp; Detroit</h4>
-    <p>x5000 (312-729-5947)</p>
-    <Br>
-    <h4>Los Angeles</h4>
-    <p>1-844-639-2661</p>
-    <br>
-    <h4>New York</h4>
-    <p>x5-5000 (212-575-5000)</p>
-    <br>
-    <h4>Washington, D.C.</h4>
-    <p>x4357 (202-351-4357)</p>
-    <br>
-    <p>Or visit <a href="sos.turner.com" target="_blank">sos.turner.com</a>.</p>
-</div>
-    
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-    
-<hr class="nhjsHR">
-    
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-    
-<a name="NT"></a>
-    
-<h4>How to get your NT login</h4>
-    
+<p>You have the option of having your RSA passcode (which gives you access to our network) on your mobile device (i.e., a "soft token") or as a key fob (i.e., a "hard token").</p>
+
+<p>To request your token, <a href="#contact">contact the EIS/IT Service Desk.</a> Once you receive your hard or soft token, follow these steps to access the network:</p>
+
+<ol class="steps">
+    <li>Open the "Pulse Secure" application on your computer.</li>
+    <li>Log in using your computer username and the passcode displayed on your token.</li>
+    <li>You will be prompted to create a personalized pin. You pin must:<br><br>
+        <ul>
+            <li>Be 6-8 characters in length &mdash; all numbers, all letters, or alphanumeric</li>
+            <li>Not use special characters, repeating numbers, or sequential numbers</li>
+        </ul>
+    </li>
+</ol>
+
 <br>
-    
-<p>Create a network password at <a href="changepass.turner.com" target="_blank">changepass.turner.com</a> by completing the following info:</p>
-    
-<br>
-    
-<div style="margin-left: 20px;">
-    <ul>
-        <li><b>Username:</b> type in your network username that was provided to you.</li>
-        <li><b>Old password:</b> type in the default password <i>Changemen0w</i>.<br><i>Note: This password is case sensitive.</i></li>
-        <li><b>New password:</b> type in a new password of your choice using this criteria:
-            <ul>
-                <li>Between 8 and 16 characters.</li>
-                <li>Cannot contain your account name or parts of your full name that exceed 2 consecutive characters.</li>
-                <li>Must contain characters from 3 of the following categories:
-                    <ul>
-                        <li>English uppercase letters (A-Z)</li>
-                        <li>English lowercase letters (a-z)</li>
-                        <li>Base 10 digits (0-9)</li>
-                        <li>Non-alphanumeric characters (e.g., ! $ # %)</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><b>Confirm password:</b> type in your new password again.</li>
-        <li><b>Click submit when finished.</b></li>
-    </ul>
-</div>
-    
+
+<p>Going forward, you will use your pin+token passcode to access the network.</p>
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
-    
+
 <hr class="nhjsHR">
-    
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-    
-<a name="RSA"></a>
-    
-<h4>How to request a hard or soft RSA token</h4>
-    
+
+<a name="contact"></a>
+<h4>How to Contact the EIS/IT Service Desk</h4>
+
 <br>
-    
-<p>You have the option of having your RSA passcode (which gives you access to our network) on a key fob (i.e., a hard token) or on your mobile device (i.e., soft token).</p>
-    
-<div style="margin-left: 20px;">
-    <ul>
-        <li>Contact EIS/IT to request and receive a new token.</li>
-        <li>Once you receive the new token, go <a href="https://eps-inf000257.tw.tweis.net/ssc" target="_blank">here</a>. Log in using your network username and password.</li>
-        <li>After logging in, you will see a <i>My Account</i> page with your listed token(s) below.</li>
-        <li>Cick on <i>set pin</i> below your listed token.</li>
-        <li>Create a personalized pin. It must be 8 characters in length &mdash; all numbers, all letters, or alphanumeric; no special characters, repeating numbers, or sequential numbers are permitted.</li>
-    </ul>
-</div>
-    
+
+<p>
+    <span style="font-family: TurnerBold;">Atlanta</span><br>
+    x7-5000 (404-82-5000)
+    <br><br>
+    <span style="font-family: TurnerBold;">Chicago &amp; Detroit</span><br>
+    x5000 (312-729-5947)
+    <br><br>
+    <span style="font-family: TurnerBold;">Los Angeles</span><br>
+    1-844-639-2661
+    <br><br>
+    <span style="font-family: TurnerBold;">New York</span><br>
+    x5-5000 (212-275-5000)
+    <br><br>
+    <span style="font-family: TurnerBold;">Washington D.C.</span><br>
+    x4357 (202-351-4357)
+    <br><br>
+    <span style="font-family: TurnerBold;">Online</span><br>
+    <a href="http://sos.turner.com" target="_blank">sos.turner.com</a>
+</p>
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
-    
+
 <hr class="nhjsHR">
-    
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
-    
+
+
 <h4>Accessing Turner Wireless Networks</h4>
-    
+
 <br>
-    
-    <p>Turner employees worldwide needing wireless connectivity can connect their devices using the “tbsemployee” wireless network. For step-by-step instructions to connect your device to this network, visit <a href="http://mywirelessdevices.turner.com" target="_blank">mywirelessdevices.turner.com</a>.
+
+<p>Turner employees worldwide needing wireless connectivity can connect their devices using the “tbsemployee” wireless network. For step-by-step instructions to connect your device to this network, visit <a href="http://mywirelessdevices.turner.com" target="_blank">mywirelessdevices.turner.com</a>.
     <br>
-    <br>
-    Turner guests and those traveling can may use the “WL-GUEST” and “twtraveler” wireless networks. Dial x9477 from an in-house phone to hear the GUEST wireless password for the day.</p>
-    
+    <br> Turner guests and those traveling can may use the “WL-GUEST” and “twtraveler” wireless networks. Dial x9477 from an in-house phone to hear the GUEST wireless password for the day.</p>
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
-    
+
 <hr class="nhjsHR">
-    
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
-    
+
 <h4>Email Retention &amp; Document Management</h4>
-    
+
 <br>
-    
+
 <p>Turner’s document management policy prescribes that employees should retain documents, including emails, only as long as they serve a business purpose. Therefore, all Turner employees should only retain email that is deemed business critical.
-<br>
-<br>
-Emails in your inbox, sent items, and self-created email folders older than 60 days (from date sent/received) will be automatically deleted. To prevent business critical emails from automatic deletion and for more information, visit <a href="http://emailpolicy.turner.com" target="_blank">emailpolicy.turner.com</a>.</p>
+    <br>
+    <br> Emails in your inbox, sent items, and self-created email folders older than 60 days (from date sent/received) will be automatically deleted. To prevent business critical emails from automatic deletion and for more information, visit <a href="http://emailpolicy.turner.com" target="_blank">emailpolicy.turner.com</a>.</p>
