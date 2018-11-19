@@ -1,3 +1,7 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
 <style>
 
         p {
@@ -72,7 +76,65 @@
         color: #fff;
     }
     
+    .alert {
+        background-color: rgba(255,189,0,.2);
+        max-width: 100%;
+        padding: 25px;
+        margin: 50px 0;
+        word-break: keep-all !important;
+        hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        -webkit-hyphens: none;
+    }
+    
+    .alert p {
+        font-size: 1.3rem;
+        font-family: TurnerRegular;
+        color: #000;
+    }
+    
+    .alert h2 {
+        font-size: 2rem;
+        font-family: TurnerBold;
+        color: #000;
+        line-height: 125%;
+        margin: 0;
+    }
+    
+    .alert a {
+        color: #000;
+        font-weight: bold;
+    }
+    
 /*NAVIGATION*/
+    
+    #scroll {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #0052e7;
+        text-indent: -9999px;
+        display: none;
+        -webkit-border-radius: 60px;
+        -mox-border-radius: 60px;
+        border-radius: 60px;
+    }
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
 
     .topnav {
       overflow: hidden;
@@ -124,12 +186,12 @@
 <div class="topnav" id="myTopnav">
   <a href="http://now.turner.com/jumpstart">Jump Start</a>    
   <a href="/jumpstart-about">About Turner</a>
-  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
   <a href="/jumpstart-career">Career Development</a>
   <a href="/jumpstart-total-rewards">Total Rewards</a>
   <a href="/jumpstart-tech">Technology</a>
   <a href="/jumpstart-security">Security</a>
+  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
@@ -144,6 +206,32 @@ function shrinkNav() {
 }
 </script>
 
+<!--Back to Top Button-->
+
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll").fadeIn();
+            } else {
+                $("#scroll").fadeOut();
+            }
+        });
+
+        $("#scroll").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+
+</script>
+
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+<!---->
+
 <h2>We got your back<span style="color: #0052e7;">.</span></h2>
 
 <div class="blackbox">
@@ -154,8 +242,29 @@ function shrinkNav() {
     <p><b>Los Angeles:</b> 323-993-5198</p>
     <p><b>New York (Time Warner Center):</b> 212-275-8200</p>
     <p><b>Washington, D.C.:</b> 202-515-2900</p>
+    <p><b>Online: <a href="/turner-global-security/" target="_blank">now.turner.com/turner-global-security</a></b></p>
     <br>
     <p style="color: rgb(255,56,0); font-weight: bold;">In an emergency, call 911 from an in-house phone (if possible).</p>
+</div>
+
+<div class="alert">
+    <h2>Report Threatening Emails, Mail, Phone Calls, and Social Media Posts</h2>
+    <br />
+    <p>If you see something, say something. Notify Turner Global Security of any threat.</p>
+    <p style="font-weight: bold;">Email <a href="mailto:globalsecurityinvestigations@turner.com">GlobalSecurityInvestigations@turner.com</a> or dial one of the below numbers for our U.S. based security control centers:</p>
+    <br />
+    <p><strong>CNN Center (Atlanta):</strong> 404-827-2433</p>
+    <p><strong>Techwood (Atlanta):</strong> 404-885-4445</p>
+    <p><strong>New York:</strong> 212-484-8700</p>
+    <p><strong>Washington, D.C.:</strong> 202-515-2900</p>
+    <p><strong>Los Angeles:</strong> 323-993-5198</p>
+    <p><strong>London:</strong> +44 20 7693 1041</p>
+</div>
+
+<div class="alert">
+    <h2>Report Workplace Violence Concerns</h2>
+    <br />
+    <p>The safety, security, and well-being of every employee is our first priority. Report any concerns regarding violence in the workplace by emailing <a href="mailto:ThreatAssessmentTeam@turner.com">ThreatAssessmentTeam@turner.com</a>.</p>
 </div>
 
 <h4>ID Badges</h4>
@@ -165,6 +274,7 @@ function shrinkNav() {
 <ul>
     <li>ID badges must be worn at all times.</li>
     <li>You may NOT share, loan, or borrow another employee's ID badge.</li>
+    <li>Do not post pictures of your badge on social media.</li>
 </ul>
 
 <div>&nbsp;</div>
@@ -176,6 +286,7 @@ function shrinkNav() {
 <ul>
     <li>All visitors are required to sign in with security.</li>
     <li>To get a visitor badge in advance, visit <a href="/visitor-guide-united-states" target="_blank">Turner Now</a>.</li>
+    <li>Visitors must be escorted at all times &mdash; you are responsible for your visitors!</li>
 </ul>
 
 <div>&nbsp;</div>
@@ -210,7 +321,7 @@ function shrinkNav() {
 
 <div>&nbsp;</div>
 
-<h4>Workplace Violence</h4>
+<h4>Safety in the Workplace</h4>
 
 <br>
 
@@ -220,4 +331,4 @@ function shrinkNav() {
 
 <Br>
 
-<h4>For more information on what to do in the event of an emergency and the company's security policy, visit <a href="/turner-global-security" target="_blank" style="font-family: TurnerBold;">Turner Now</a>.</h4>
+<h4>For more information on what to do in the event of an emergency and the company's security policy, visit <a href="/turner-global-security" target="_blank" style="font-family: TurnerBold;" style="color: #0052e7 !important;">Turner Now</a>.</h4>

@@ -1,3 +1,7 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
 <style>
 
     p {
@@ -133,6 +137,33 @@
     .topnav .icon {
       display: none;
     }
+    
+    #scroll {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #0052e7;
+        text-indent: -9999px;
+        display: none;
+        -webkit-border-radius: 60px;
+        -mox-border-radius: 60px;
+        border-radius: 60px;
+    }
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
 
 /*MEDIA QUERIES*/
 
@@ -159,12 +190,12 @@
 <div class="topnav" id="myTopnav">
   <a href="http://now.turner.com/jumpstart">Jump Start</a>    
   <a href="/jumpstart-about">About Turner</a>
-  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
   <a href="/jumpstart-career">Career Development</a>
   <a href="/jumpstart-total-rewards">Total Rewards</a>
   <a href="/jumpstart-tech">Technology</a>
   <a href="/jumpstart-security">Security</a>
+  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
@@ -178,6 +209,32 @@ function shrinkNav() {
     }
 }
 </script>
+
+<!--Back to Top Button-->
+
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll").fadeIn();
+            } else {
+                $("#scroll").fadeOut();
+            }
+        });
+
+        $("#scroll").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+
+</script>
+
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+<!---->
 
 <div>
     <h2>
@@ -225,7 +282,7 @@ function shrinkNav() {
 <div class="blackbox">
     <p>If you remember nothing else from this page, remember this:</p>
     <h2>You have <span style="color: rgb(255,56,0)">30 days</span> from your benefits eligibility date to make your benefits elections.</h2>
-    <p>Visit <a href="http://www.timewarnerbenefits.com" target="_blank">timewarnerbenefits.com</a> or call 1-800-690-1180 to review your benefit options and to make your elections.</p>
+    <p>Visit <a href="http://www.warnermediabenefits.com" target="_blank">warnermediabenefits.com</a> or call 1-800-690-1180 to review your benefit options and to make your elections.</p>
 </div>
 
 <br>
@@ -411,45 +468,54 @@ function shrinkNav() {
 <div>&nbsp;</div>
     
 <div class="tool-grid">
-    <a href="/turner-athletic-club" target="_blank">
-        <h4>Turner Athletic Club</h4>
-    </a>
-    <a href="/story/turner-health-and-wellness-center" target="_blank">
-        <h4>Health &amp; Wellness Center &mdash; Atlanta</h4>
-    </a>
-    <a href="http://warnermediafitnation.com" target="_blank">
-        <h4>WarnerMedia Fit Nation</h4>
-        <p>VPN Required</p>
-    </a>
-    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=dca8f4e3137cba006b3d30128144b006" target="_blank">
-        <h4>Parental Leave</h4>
-    </a>
-    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=19fc0bc013cd7a40ee513ff18144b04f" target="_blank">
-        <h4>Backup Childcare</h4>
-    </a>
-    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=6698b4e3137cba006b3d30128144b007" target="_blank">
-        <h4>Elder Care</h4>
-    </a>
     <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=d29874e3137cba006b3d30128144b06b" target="_blank">
         <h4>Adoption Assistance</h4>
-    </a>
-    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=067ec38413cd7a40ee513ff18144b0cb" target="_blank">
-        <h4>Egg Freezing Assistance Program</h4>
-    </a>
-    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=a9a874e3137cba006b3d30128144b0f5" target="_blank">
-        <h4>Surrogacy Assistance Program</h4>
-    </a>
-    <a href="http://www.turnerbrandshop.com" target="_blank">
-        <h4>Turner Brand Shop</h4>
     </a>
     <a href="/perksdiscounts" target="_blank">
         <h4>Attractions &amp; Events</h4>
     </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=19fc0bc013cd7a40ee513ff18144b04f" target="_blank">
+        <h4>Backup Childcare</h4>
+    </a>
     <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=8bb291a213f8be00ee513ff18144b01c" target="_blank">
         <h4>Care.com</h4>
     </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f659bd7f13b83e006b3d30128144b0a0" target="_blank">
+        <h4>Commuter Benefits</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=067ec38413cd7a40ee513ff18144b0cb" target="_blank">
+        <h4>Egg Freezing Assistance Program</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=6698b4e3137cba006b3d30128144b007" target="_blank">
+        <h4>Elder Care</h4>
+    </a>
     <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f25971bf13b83e006b3d30128144b0fe" target="_blank">
         <h4>Good Measure Meals</h4>
+    </a>
+    <a href="/story/turner-health-and-wellness-center" target="_blank">
+        <h4>Health &amp; Wellness Center &mdash; Atlanta</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=dca8f4e3137cba006b3d30128144b006" target="_blank">
+        <h4>Parental Leave</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=a9a874e3137cba006b3d30128144b0f5" target="_blank">
+        <h4>Surrogacy Assistance Program</h4>
+    </a>
+    <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f99874e3137cba006b3d30128144b05e" target="_blank">
+        <h4>Tuition Reimbursement</h4>
+    </a>
+    <a href="/turner-athletic-club" target="_blank">
+        <h4>Turner Athletic Club</h4>
+    </a>
+    <a href="http://www.turnerbrandshop.com" target="_blank">
+        <h4>Turner Brand Shop</h4>
+    </a>
+    <a href="https://landing.virginpulse.com/warnermedia" target="_blank">
+        <h4>Virgin Pulse</h4>
+    </a>
+    <a href="http://warnermediafitnation.com" target="_blank">
+        <h4>WarnerMedia Fit Nation</h4>
+        <p>VPN Required</p>
     </a>
     <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=f25971bf13b83e006b3d30128144b0fe" target="_blank">
         <h4>Weight Watchers&reg;</h4>

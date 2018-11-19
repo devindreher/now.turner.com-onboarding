@@ -1,3 +1,7 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
 <style>
 
     p {
@@ -68,6 +72,33 @@
     .topnav .icon {
       display: none;
     }
+    
+    #scroll {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #0052e7;
+        text-indent: -9999px;
+        display: none;
+        -webkit-border-radius: 60px;
+        -mox-border-radius: 60px;
+        border-radius: 60px;
+    }
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
 
 /*MEDIA QUERIES*/
 
@@ -94,12 +125,12 @@
 <div class="topnav" id="myTopnav">
   <a href="http://now.turner.com/jumpstart">Jump Start</a>    
   <a href="/jumpstart-about">About Turner</a>
-  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
   <a href="/jumpstart-career">Career Development</a>
   <a href="/jumpstart-total-rewards">Total Rewards</a>
   <a href="/jumpstart-tech">Technology</a>
   <a href="/jumpstart-security">Security</a>
+  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
@@ -113,6 +144,32 @@ function shrinkNav() {
     }
 }
 </script>
+
+<!--Back to Top Button-->
+
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll").fadeIn();
+            } else {
+                $("#scroll").fadeOut();
+            }
+        });
+
+        $("#scroll").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+
+</script>
+
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+<!---->
 
 <h2>We seriously care about your career<span style="color: #0052e7;">.</span></h2>
 
@@ -187,5 +244,5 @@ function shrinkNav() {
         <li>Collaboration</li>
     </ul>
 </div>
-
+<br>
 <p>Talk with your manager about what these traits look like for your role. Learn more at <a href="http://now.turner.com/learnnow" target="_blank">learn.turner.com</a>.</p>

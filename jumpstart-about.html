@@ -1,52 +1,55 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
 <style>
-    
     p {
         color: #000;
     }
-    
+
     ul li {
         color: #000;
     }
-    
+
     h2 {
         font-family: TurnerBold;
         font-size: 5rem;
         margin-top: 30px;
         line-height: 95%;
     }
-    
+
     h3 {
         font-family: TurnerBold;
         font-size: 1.5rem;
     }
-    
+
     nhjsHR {
         border: 0;
         height: 0;
-        border-top: 1px solid rgba(0,0,0,0.1);
-        border-bottom: 1px solid rgba(255,255,255,0.3);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
-    
+
     .turnerLife {
         background-color: #0052e7;
         max-width: 100%;
         padding: 20px;
         margin: 50px 0;
         word-break: keep-all !important;
-        
+
     }
-    
+
     .turnerLife h2 {
         font-size: 3rem;
         font-family: TurnerBold;
         color: #fff;
     }
-    
+
     .turnerLife p {
         font-family: TurnerRegular;
         color: #fff;
     }
-    
+
     .subHead {
         font-size: 3rem;
         color: #000;
@@ -55,7 +58,7 @@
         margin: 0 0 5px 0;
         padding: 0;
     }
-    
+
     .turnerMission {
         background-color: #000;
         max-width: 100%;
@@ -67,27 +70,27 @@
         -ms-hyphens: none;
         -webkit-hyphens: none;
     }
-    
+
     .turnerMission p {
         font-size: 1.3rem;
         font-family: TurnerRegular;
         color: #fff;
     }
-    
+
     .turnerMission h2 {
         font-size: 3rem;
         font-family: TurnerBold;
         color: #fff;
     }
-    
-/*RESPONSIVE 3 COLUMNS*/
-    
+
+    /*RESPONSIVE 3 COLUMNS*/
+
     .nhjs-col3 {
         float: left;
         width: 33.33%;
         padding: 10px;
     }
-    
+
     .nhjs-col3 h3 {
         font-family: TurnerBold;
         font-size: 1.5em;
@@ -95,66 +98,66 @@
         line-height: 100%;
         margin: 5px 0;
     }
-    
+
     .nhjs-col3 p {
         color: #000;
         font-size: 1.3rem;
         line-height: 110%;
     }
-    
+
     .nhjs-row3:after {
         content: "";
         display: table;
         clear: both;
     }
-    
+
     .nhjs-col3 img {
         max-width: 200px;
         margin: 0 auto;
     }
-    
-/*RESPONSIVE 2 COLUMNS*/
-    
+
+    /*RESPONSIVE 2 COLUMNS*/
+
     .nhjs-col2 {
         float: left;
         width: 50%;
         padding: 0;
         margin: 0;
     }
-    
+
     .nhjs-row2:after {
         content: "";
         display: table;
         clear: both;
     }
-    
-/*JOHN HEADER*/
-    
+
+    /*JOHN HEADER*/
+
     .john {
         width: 100%;
         display: none;
     }
-    
-/*TIMELINE*/
-    
+
+    /*TIMELINE*/
+
     .timeline-container {
         max-width: 1024px;
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .timeline-item {
         padding: 3em 2em 2em;
         position: relative;
-        color: rgba(0,0,0,0.7);
-        border-left: 2px solid rgba(0,0,0,0.3);
+        color: rgba(0, 0, 0, 0.7);
+        border-left: 2px solid rgba(0, 0, 0, 0.3);
     }
-    
+
     .timeline-item p {
         font-size: 1rem;
         color: #000;
     }
-    
+
     .timeline-item::before {
         content: attr(date-is);
         position: absolute;
@@ -164,7 +167,7 @@
         font-family: TurnerBold;
         font-size: 1.2rem;
     }
-    
+
     .timeline-item::after {
         width: 10px;
         height: 10px;
@@ -174,94 +177,166 @@
         left: -7px;
         border-radius: 10px;
         content: '';
-        border: 2px solid rgba(0,0,0,0.3);
+        border: 2px solid rgba(0, 0, 0, 0.3);
         background: white;
     }
-    
+
     .timeline-item:last-child {
-        -o-border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
-        border-image: -webkit-linear-gradient(top rgba(0,0,0,0.3) 60%, transparent) 1 100%;
-        border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
+        -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: -webkit-linear-gradient(top rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
     }
-    
-/*NAVIGATION*/
+
+    /*NAVIGATION*/
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 10px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
 
-/*MEDIA QUERIES*/
+    #scroll {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #0052e7;
+        text-indent: -9999px;
+        display: none;
+        -webkit-border-radius: 60px;
+        -mox-border-radius: 60px;
+        border-radius: 60px;
+    }
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
+
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 2000px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .topnav.responsive {
+            position: relative;
+        }
+
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
             top: 0;
         }
+
         .topnav.responsive a {
             float: none;
             display: block;
             text-align: left;
         }
     }
-    
+
     @media screen and (max-width: 600px) {
-        .nhjs-col3 {width: 100%;}
-        .nhjs-row2 {display: none;}
-        .john {display: inline-block;}
+        .nhjs-col3 {
+            width: 100%;
+        }
+
+        .nhjs-row2 {
+            display: none;
+        }
+
+        .john {
+            display: inline-block;
+        }
     }
 
-    
 </style>
 
 <!--TOP NAVIGATION-->
 
 <div class="topnav" id="myTopnav">
-  <a href="http://now.turner.com/jumpstart">Jump Start</a>    
-  <a href="/jumpstart-about">About Turner</a>
-  <a href="/jumpstart-90-day-guide">90-Day Guide</a>
-  <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
-  <a href="/jumpstart-career">Career Development</a>
-  <a href="/jumpstart-total-rewards">Total Rewards</a>
-  <a href="/jumpstart-tech">Technology</a>
-  <a href="/jumpstart-security">Security</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://now.turner.com/jumpstart">Jump Start</a>
+    <a href="/jumpstart-about">About Turner</a>
+    <a href="/jumpstart-diversity">Diversity &amp; Inclusion</a>
+    <a href="/jumpstart-career">Career Development</a>
+    <a href="/jumpstart-total-rewards">Total Rewards</a>
+    <a href="/jumpstart-tech">Technology</a>
+    <a href="/jumpstart-security">Security</a>
+    <a href="/jumpstart-90-day-guide">90-Day Guide</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
+
+<!--Back to Top Button-->
+
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll").fadeIn();
+            } else {
+                $("#scroll").fadeOut();
+            }
+        });
+
+        $("#scroll").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+
+</script>
+
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+<!---->
 
 <h2>About Turner<span style="color: #0052e7;">.</span></h2>
 
@@ -273,17 +348,17 @@ function shrinkNav() {
 <p>We find and share stories that matter to our audiences. On screens of every shape and size &mdash; in homes, hotels, airports, and offices &mdash; you'll find Turner. We are where you are.</p>
 
 <span style="font-size: 3rem; font-family: TurnerBold; color: #000;">
-100<span style="color: #0052e7;">+</span></span><br>
+    100<span style="color: #0052e7;">+</span></span><br>
 <span style="font-size: 1.2rem; font-family: TurnerBold; color: #000;">branded channels in</span>
 <br>
 <br>
 <span style="font-size: 3rem; font-family: TurnerBold; color: #000;">
-30<span style="color: #0052e7;">+</span></span><br>
+    30<span style="color: #0052e7;">+</span></span><br>
 <span style="font-size: 1.2rem; font-family: TurnerBold; color: #000;">languages in</span>
 <br>
 <br>
 <span style="font-size: 3rem; font-family: TurnerBold; color: #000;">
-200<span style="color: #0052e7;">+</span></span><br>
+    200<span style="color: #0052e7;">+</span></span><br>
 <span style="font-size: 1.2rem; font-family: TurnerBold; color: #000;">countries</span>
 
 <div>&nbsp;</div>
@@ -294,11 +369,8 @@ function shrinkNav() {
 
 <div class="turnerLife">
     <h2>
-        #TurnerLife<br>
-        =<br>
-        More Fun.<br>
-        Less Fear.<br>
-        All In.    
+        #TurnerLife<br> =
+        <br> More Fun.<br> Less Fear.<br> All In.
     </h2>
     <br>
     <br>
@@ -419,7 +491,7 @@ function shrinkNav() {
 <br>
 <span style="color: #000; font-size: 1.2rem; font-family: TurnerBold;">
     Follow Turner <a href="https://www.facebook.com/turnerbroadcasting/" target="_blank"><img src="https://s3.amazonaws.com/tpd-images/onboarding/facebook-logo.png"></a>
-    &nbsp; 
+    &nbsp;
     <a href="https://twitter.com/turner" target="_blank"><img src="https://s3.amazonaws.com/tpd-images/onboarding/twitter-logo.png"></a>
     &nbsp;
     <a href="https://www.linkedin.com/company/2047/" target="_blank"><img src="https://s3.amazonaws.com/tpd-images/onboarding/linkedin-logo.png"></a> &nbsp;
@@ -434,21 +506,19 @@ function shrinkNav() {
     <span style="font-size: 1.5rem; font-family: TurnerBold; color: #000;">Welcome to the #TurnerLife</span>
     <br>
     <p>
-        <a href="www.twitter.com/turner/" target="_blank">@Turner</a><br>
-        <a href="www.twitter.com/adultswim" target="_blank">@adultswim</a><br>
-        <a href="www.twitter.com/bleacherreport" target="_blank">@BleacherReport</a><br>
-        <a href="www.twitter.com/boomerangtoons" target="_blank">@BoomerangToons</a><br>
-        <a href="www.twitter.com/cartoonnetwork" target="_blank">@cartoonnetwork</a><br>
-        <a href="www.twitter.com/cnn" target="_blank">@CNN</a><br>
-        <a href="www.twitter.com/cnni" target="_blank">@cnni</a><br>
-        <a href="www.twitter.com/eleaguetv" target="_blank">@ELEAGUETV</a><br>
-        <a href="www.twitter.com/filmstruck" target="_blank">@FilmStruck</a><br>
-        <a href="www.twitter.com/hlntv" target="_blank">@HLNTV</a><br>
-        <a href="www.twitter.com/tbsnetwork" target="_blank">@TBSNetwork</a><br>
-        <a href="www.twitter.com/tcm" target="_blank">@tcm</a><br>
-        <a href="www.twitter.com/tntdrama" target="_blank">@tntdrama</a><br>
-        <a href="www.twitter.com/trutv" target="_blank">@truTV</a><br>
-        <a href="www.twitter.com/turnersportspr" target="_blank">@TurnerSportsPR</a>
+        <a href="https://www.twitter.com/adultswim" target="_blank">@adultswim</a><br>
+        <a href="https://www.twitter.com/bleacherreport" target="_blank">@BleacherReport</a><br>
+        <a href="https://www.twitter.com/boomerangtoons" target="_blank">@BoomerangToons</a><br>
+        <a href="https://www.twitter.com/cartoonnetwork" target="_blank">@CartoonNetwork</a><br>
+        <a href="https://www.twitter.com/cnn" target="_blank">@CNN</a><br>
+        <a href="https://www.twitter.com/turner" target="_blank">@Turner</a><br>
+        <a href="https://www.twitter.com/eleaguetv" target="_blank">@ELEAGUETV</a><br>
+        <a href="https://www.twitter.com/greatbigstory" target="_blank">@GreatBigStory</a><br>
+        <a href="https://www.twitter.com/tbsnetwork" target="_blank">@TBSNetwork</a><br>
+        <a href="https://www.twitter.com/tcm" target="_blank">@TCM</a><br>
+        <a href="https://www.twitter.com/tntdrama" target="_blank">@TNTDrama</a><br>
+        <a href="https://www.twitter.com/trutv" target="_blank">@truTV</a><br>
+        <a href="https://www.twitter.com/turnersportspr" target="_blank">@TurnerSportsPR</a>
     </p>
 </div>
 
@@ -474,26 +544,23 @@ function shrinkNav() {
     <div class="nhjs-col3">
         <h3>West Coast</h3>
         <p>
-            Los Angeles<br>
-            San Francisco
+            Los Angeles<br> San Francisco
         </p>
     </div>
     <div class="nhjs-col3">
         <h3>Midwest</h3>
         <p>
-            Detroit<br>
-            Chicago<br>
-            Denver<br>
-            Dallas
+            Detroit<br> Chicago
+            <br> Denver
+            <br> Dallas
         </p>
     </div>
     <div class="nhjs-col3">
         <h3>East Coast</h3>
         <p>
-            New York<Br>
-            Washington, D.C.<br>
-            Atlanta<br>
-            Miami
+            New York
+            <Br> Washington, D.C.<br> Atlanta
+            <br> Miami
         </p>
     </div>
 </div>
@@ -502,25 +569,20 @@ function shrinkNav() {
     <div class="nhjs-col3">
         <h3>Latin America</h3>
         <p>
-            Mexico City<br>
-            Buenos Aires<br>
-            Sao Paulo<br>
-            Santiago
+            Mexico City<br> Buenos Aires<br> Sao Paulo<br> Santiago
         </p>
     </div>
     <div class="nhjs-col3">
         <h3>Europe</h3>
         <p>
-            London<br>
-            Munich
+            London<br> Munich
         </p>
     </div>
     <div class="nhjs-col3">
         <h3>Asia Pacific</h3>
         <p>
-            Hong Kong<br>
-            Tokyo<br>
-            Mumbai
+            Hong Kong<br> Tokyo
+            <br> Mumbai
         </p>
     </div>
 </div>
@@ -622,7 +684,7 @@ function shrinkNav() {
     </div>
     <div class="nhjs-col3">
         <img src="https://s3.amazonaws.com/tpd-images/onboarding/desroches-pascal.png">
-        <h3>Pascal Desroches</h3>        
+        <h3>Pascal Desroches</h3>
         <p>Chief Financial Officer, WarnerMedia and Turner Administrative Officer</p>
     </div>
     <div class="nhjs-col3">
@@ -753,12 +815,9 @@ function shrinkNav() {
 </p>
 
 <p style="margin-left: 20px;">
-    <b>Capacity:</b><br>
-    The number of hours available to sell to advertisers.
+    <b>Capacity:</b><br> The number of hours available to sell to advertisers.
     <br><br>
-    <b>Demographics:</b><br>
-    Advertisers use this info to determine the type of audiences viewing a particular program.
+    <b>Demographics:</b><br> Advertisers use this info to determine the type of audiences viewing a particular program.
     <br><br>
-    <b>Ratings:</b><br>
-    We use this info to sell advertising, set prices for commercials, attract media attention and making programming decisions.
+    <b>Ratings:</b><br> We use this info to sell advertising, set prices for commercials, attract media attention and making programming decisions.
 </p>
